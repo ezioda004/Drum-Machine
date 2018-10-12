@@ -4,21 +4,24 @@ import base from "./icons/base.svg";
 import side from "./icons/side-drum.svg";
 import c1 from "./icons/cymbals.svg";
 import c2 from "./icons/cymbals1.svg";
+import Kit from "./Components/Kit/Kit";
 import "./App.css";
-const sounds = {
-  snare: "https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3",
-  sidestick: "https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3",
-  "Punchy kick":
-    "https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3",
-  "Closed hi-hat": "https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3",
-  "Open hi-hat": "https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3",
-  "Closed HH-2": "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3",
-  kick: "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3",
-  "kick and hi-hat":
-    "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3",
-  "open hh-2": "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
-};
+
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      currentKey: ''
+    }
+
+  }
+  componentDidMount(){
+    document.addEventListener("keydown", (e) => {
+      this.setState({
+        currentKey: e.key
+      });
+    })
+  }
   render() {
     return (
       <div className="App">
@@ -30,7 +33,7 @@ class App extends Component {
         <div className="section2">
           <div className="tom">
             <div className="tom1-container">
-              <img className="tt t1" src={t1} />
+              <img className="tt t1 play" src={t1} />
             </div>
             <div className="side-base">
               <img src={side} />
@@ -47,10 +50,7 @@ class App extends Component {
             <img className="c1" src={c1} alt="" />
           </div>
         </div>
-
-        {/* <img src = {drum} height = "200" width = "200"/>
-       <img src = {drum} height = "200" width = "200"/>
-       <img src = {drum} height = "200" width = "200"/> */}
+        <Kit keyPress = {this.state.currentKey}/>
       </div>
     );
   }
