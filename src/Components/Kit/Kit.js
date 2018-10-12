@@ -60,25 +60,35 @@ class Kit extends Component {
     super(props);
     this.state = {};
     this.myRef = React.createRef();
-
   }
-  componentWillReceiveProps(props){
-      this.playSound(props.keyPress.toUpperCase());
+  componentWillReceiveProps(nextProps) {
+    this.playSound(nextProps.keyPress.toUpperCase());
   }
-  playSound(code){
-      [...this.myRef.current.children].forEach(pad => pad.id == code ? pad.children[0].play() : null)
+  playSound(code) {
+    [...this.myRef.current.children].forEach(pad => {
+      let audio = pad.children[0];
+      if (audio && audio.id === code) {
+        audio.currentTime = 0;
+        audio.play();
+      }
+    });
   }
-  clickHandler = (e) => {
-      this.playSound(e.target.id)
-  }
+  clickHandler = e => {
+    this.playSound(e.target.children[0].id);
+  };
   render() {
     let x = sounds.map((pad, i) => (
-      <div key={i} id={pad.key} className="drum-pad" onClick = {this.clickHandler}>
-        <audio className="clip" id={pad.id} src={pad.sound} />
+      <div key={i} id={pad.id} className="drum-pad" onClick={this.clickHandler}>
+        <audio className="clip" id={pad.key} src={pad.sound} />
         {pad.key}
       </div>
     ));
-    return <div ref={this.myRef}>{x}</div>;
+    return (
+      <div id="drum-machine" ref={this.myRef}>
+        {x}
+        <div id="display" />
+      </div>
+    );
   }
 }
 
