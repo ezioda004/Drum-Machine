@@ -1,0 +1,66 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+.App {
+  position: relative;
+  top: 200px;
+  height: 100%;
+  .section2, .section1 {
+      display: flex;
+      justify-content: center;
+  }
+  .tom {
+    height: 300px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .tom1-container {
+      position: relative;
+      left: 70px;
+    }
+    .tom2-container {
+      position: relative;
+      left: -40px;
+    }
+  }
+  .tt {
+    width: 120px;
+    height: 120px;
+  }
+  .t1 {
+    align-self: flex-end;
+    transform: rotate(20deg);
+  }
+  .t2 {
+    align-self: flex-start;
+    transform: rotate(-20deg);
+  }
+  .c1 {
+    height: 170px;
+    position: relative;
+    left: -30px;
+  }
+  .c2 {
+    transform: scaleX(-1);
+  }
+  .cym {
+    //   position: absolute;
+    //   top: -150px;
+    //   left: 40%;
+    position: relative;
+    left: -8%;
+    height: 150px;
+    width: 150px;
+    top: 10px;
+  }
+  .base {
+    align-self: flex-start;
+  }
+  .side-base {
+      position: relative;
+      left: 20px;
+  }
+}

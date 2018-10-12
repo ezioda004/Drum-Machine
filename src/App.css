@@ -1,32 +1,94 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
 .App {
-  text-align: center;
+  position: relative;
+  top: 200px;
+  height: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .section2, .App .section1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.App .tom {
+  height: 300px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .tom .tom1-container {
+  position: relative;
+  left: 70px;
 }
+
+.App .tom .tom2-container {
+  position: relative;
+  left: -40px;
+}
+
+.App .tt {
+  width: 120px;
+  height: 120px;
+}
+
+.App .t1 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+.App .t2 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+.App .c1 {
+  height: 170px;
+  position: relative;
+  left: -30px;
+}
+
+.App .c2 {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.App .cym {
+  position: relative;
+  left: -8%;
+  height: 150px;
+  width: 150px;
+  top: 10px;
+}
+
+.App .base {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.App .side-base {
+  position: relative;
+  left: 20px;
+}
+/*# sourceMappingURL=App.css.map */
