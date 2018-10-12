@@ -16,7 +16,7 @@ class App extends Component {
 
   }
   componentDidMount(){
-    document.addEventListener("keydown", (e) => {
+    document.addEventListener("keydown", e => {
       this.setState({
         currentKey: e.key
       });

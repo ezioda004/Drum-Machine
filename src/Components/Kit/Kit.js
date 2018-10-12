@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Display from "../Display/Display";
+
 const sounds = [
   {
     key: "Q",
@@ -58,7 +60,9 @@ const sounds = [
 class Kit extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      name: ""
+    };
     this.myRef = React.createRef();
   }
   componentWillReceiveProps(nextProps) {
@@ -68,6 +72,9 @@ class Kit extends Component {
     [...this.myRef.current.children].forEach(pad => {
       let audio = pad.children[0];
       if (audio && audio.id === code) {
+        this.setState({
+          name: pad.id
+        });
         audio.currentTime = 0;
         audio.play();
       }
@@ -86,7 +93,7 @@ class Kit extends Component {
     return (
       <div id="drum-machine" ref={this.myRef}>
         {x}
-        <div id="display" />
+        <Display name  = {this.state.name}/>
       </div>
     );
   }
