@@ -1,0 +1,96 @@
+#drum-machine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  width: 47%;
+  background-color: #757575;
+  /* IE9, iOS 3.2+ */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIwJSIgY3k9IjAlIiByPSIxNDEuNDIxMzU2MjM3MzA5NSUiPjxzdG9wIHN0b3AtY29sb3I9IiM4MDgwODAiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzViNWI1YiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjU1OTk5OTk5OTk5OTk5OSIvPjxzdG9wIHN0b3AtY29sb3I9IiNhOWE5YTkiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+  /* Android 2.3- hack (needed for the actual radial gradient) */
+  /* Android 2.3 */
+  /* IE10+ */
+  background-image: radial-gradient(ellipse farthest-corner at left top, gray 0%, #5b5b5b 65.6%, darkgray 100%);
+  background-image: -ms-radial-gradient(left top, ellipse farthest-corner, gray 0%, #5b5b5b 65.6%, darkgray 100%);
+  border-radius: 10px;
+}
+
+#drum-machine .drum-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 50px auto 10px auto;
+  width: 60%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+}
+
+#drum-machine .drum-wrapper .drum-pad {
+  width: 65px;
+  height: 55px !important;
+  text-align: center;
+  color: black;
+  padding: 5px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  margin: 3px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  line-height: 3;
+  border-radius: 5px;
+}
+
+#drum-machine .drum-wrapper .drum-pad:hover {
+  cursor: pointer;
+  color: white;
+  -webkit-box-shadow: 0 0 10px #f04243, 0 0 20px #f04243, 0 0 30px #f04243;
+          box-shadow: 0 0 10px #f04243, 0 0 20px #f04243, 0 0 30px #f04243;
+}
+
+#drum-machine .drum-wrapper #snare {
+  background: aqua;
+}
+
+#drum-machine .drum-wrapper #sideDrum {
+  background: purple;
+}
+
+#drum-machine .drum-wrapper #tom-tom2 {
+  background: green;
+}
+
+#drum-machine .drum-wrapper #closeHH {
+  background: orange;
+}
+
+#drum-machine .drum-wrapper #openHH {
+  background: lightsalmon;
+}
+
+#drum-machine .drum-wrapper #closeHH2 {
+  background: #f04243;
+}
+
+#drum-machine .drum-wrapper #kick {
+  background: blueviolet;
+}
+
+#drum-machine .drum-wrapper #kickAndHH {
+  background: grey;
+}
+
+#drum-machine .drum-wrapper #openHH2 {
+  background: yellowgreen;
+}
+/*# sourceMappingURL=Kit.css.map */

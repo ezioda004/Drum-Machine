@@ -1,0 +1,14 @@
+#display {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+}
+
+#display h2 {
+  background: yellow;
+}
+
+#display h1 {
+  margin: 0;
+}
+/*# sourceMappingURL=Display.css.map */

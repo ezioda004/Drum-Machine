@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
 html,
 body,
 #root {
   height: 100%;
+  background: #333;
+  font-family: 'Orbitron', sans-serif;
+}
+h1 {
 }
 .App {
-  position: relative;
-  top: 200px;
+  // position: relative;
+  // top: 200px;
+  margin-top: 50px;
   height: 100%;
   // background: #131313;
   .section2,

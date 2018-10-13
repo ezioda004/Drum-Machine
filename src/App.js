@@ -26,6 +26,7 @@ class App extends Component {
     document.addEventListener("keydown", this.soundToAnimation);
   }
   clickSoundHandler = e => {
+    //This handler gets the Key clicked from Kit component and passes to soundToAnimation
     this.soundToAnimation(e);
   };
   soundToAnimation = e => {
@@ -56,7 +57,8 @@ class App extends Component {
   render() {
     const { addTo: part } = this.state;
     return (
-      <div className="App">
+      <main>
+        <div className="App">
         <div className="section1">
           <div className="cym">
             <img
@@ -100,6 +102,7 @@ class App extends Component {
         </div>
         <Kit clickSoundHandler = {this.clickSoundHandler} keyPress={this.state.currentKey} />
       </div>
+      </main>
     );
   }
 }

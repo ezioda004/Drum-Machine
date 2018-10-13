@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Display from "../Display/Display";
-
+import "./Kit.css";
 export const sounds = [
   {
     key: "Q",
@@ -14,14 +14,14 @@ export const sounds = [
     keycode: 87,
     id: "sideDrum",
     class: "side-base",
-    sound: "https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"
+    sound: "https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"
   },
   {
     key: "E",
     keycode: 69,
-    id: "punchyKick",
+    id: "tom-tom2",
     class: "tom2",
-    sound: "https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"
+    sound: "https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"
   },
   {
     key: "A",
@@ -101,10 +101,12 @@ class Kit extends Component {
       </div>
     ));
     return (
-      <div id="drum-machine" ref={this.myRef}>
-        {drumPads}
-
+      <div id="drum-machine" >
+      <div class = "drum-wrapper" ref={this.myRef}>
+      {drumPads}
+      </div>
         <Display name={this.state.name} />
+       
       </div>
     );
   }
