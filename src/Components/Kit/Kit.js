@@ -1,59 +1,68 @@
 import React, { Component } from "react";
 import Display from "../Display/Display";
 
-const sounds = [
+export const sounds = [
   {
     key: "Q",
     keycode: 81,
     id: "snare",
+    class: "tom1",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"
   },
   {
     key: "W",
     keycode: 87,
     id: "sideDrum",
+    class: "side-base",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"
   },
   {
     key: "E",
     keycode: 69,
     id: "punchyKick",
+    class: "tom2",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"
   },
   {
     key: "A",
     keycode: 65,
     id: "closeHH",
+    class: "cym1",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3"
   },
   {
     key: "S",
     keycode: 83,
     id: "openHH",
+    class: "cym2",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3"
   },
   {
     key: "D",
     keycode: 68,
     id: "closeHH2",
+    class: "cym1",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
   },
   {
     key: "Z",
     keycode: 90,
     id: "kick",
+    class: "base",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"
   },
   {
     key: "X",
     keycode: 88,
     id: "kickAndHH",
+    class: "kick cym1",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
   },
   {
     key: "C",
     keycode: 67,
     id: "openHH2",
+    class: "cym2",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
   }
 ];
@@ -84,7 +93,7 @@ class Kit extends Component {
     this.playSound(e.target.children[0].id);
   };
   render() {
-    let x = sounds.map((pad, i) => (
+    let drumPads = sounds.map((pad, i) => (
       <div key={i} id={pad.id} className="drum-pad" onClick={this.clickHandler}>
         <audio className="clip" id={pad.key} src={pad.sound} />
         {pad.key}
@@ -92,7 +101,8 @@ class Kit extends Component {
     ));
     return (
       <div id="drum-machine" ref={this.myRef}>
-        {x}
+        {drumPads}
+        
         <Display name  = {this.state.name}/>
       </div>
     );
