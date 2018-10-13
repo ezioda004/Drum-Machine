@@ -1,11 +1,38 @@
 #display {
-  
+    display: flex;
+    flex-direction: column;
     flex-basis: 100%;
     text-align: center;
+    margin: 10px;
+    
     h2 {
-        background: yellow;
+        
     }
     h1 {
         margin: 0;
+        text-align: left;
+    }
+    .first-word {
+        color: coral;
+    }
+    .second-word {
+        color: whitesmoke;
+    }
+    .screen {
+        border: 1px grey solid;
+        height: 100%;
+        flex-grow: 1;
+        margin: 5px;
+        font-family: 'DS-DIGITAL';
+        color: red;
+        .inside {
+            margin: 10px;
+            height: 50%;
+            background: #222;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 }
