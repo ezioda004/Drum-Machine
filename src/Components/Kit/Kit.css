@@ -49,48 +49,95 @@
       align-self: center;
   line-height: 3;
   border-radius: 5px;
+  border: 2px #757575 solid;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-#drum-machine .drum-wrapper .drum-pad:hover {
+#drum-machine .drum-wrapper .drum-pad:hover, #drum-machine .drum-wrapper :focus {
   cursor: pointer;
   color: white;
-  -webkit-box-shadow: 0 0 10px #f04243, 0 0 20px #f04243, 0 0 30px #f04243;
-          box-shadow: 0 0 10px #f04243, 0 0 20px #f04243, 0 0 30px #f04243;
+  outline: none;
 }
 
 #drum-machine .drum-wrapper #snare {
   background: aqua;
 }
 
+#drum-machine .drum-wrapper #snare:hover, #drum-machine .drum-wrapper #snare:focus {
+  -webkit-box-shadow: 0 0 10px aqua, 0 0 20px aqua;
+          box-shadow: 0 0 10px aqua, 0 0 20px aqua;
+}
+
 #drum-machine .drum-wrapper #sideDrum {
   background: purple;
+}
+
+#drum-machine .drum-wrapper #sideDrum:hover, #drum-machine .drum-wrapper #sideDrum:focus {
+  -webkit-box-shadow: 0 0 10px purple, 0 0 20px purple;
+          box-shadow: 0 0 10px purple, 0 0 20px purple;
 }
 
 #drum-machine .drum-wrapper #tom-tom2 {
   background: green;
 }
 
+#drum-machine .drum-wrapper #tom-tom2:hover, #drum-machine .drum-wrapper #tom-tom2:focus {
+  -webkit-box-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow;
+          box-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow;
+}
+
 #drum-machine .drum-wrapper #closeHH {
   background: orange;
+}
+
+#drum-machine .drum-wrapper #closeHH:hover, #drum-machine .drum-wrapper #closeHH:focus {
+  -webkit-box-shadow: 0 0 10px orange, 0 0 20px orange;
+          box-shadow: 0 0 10px orange, 0 0 20px orange;
 }
 
 #drum-machine .drum-wrapper #openHH {
   background: lightsalmon;
 }
 
+#drum-machine .drum-wrapper #openHH:hover, #drum-machine .drum-wrapper #openHH:focus {
+  -webkit-box-shadow: 0 0 10px lightcoral, 0 0 20px lightcoral;
+          box-shadow: 0 0 10px lightcoral, 0 0 20px lightcoral;
+}
+
 #drum-machine .drum-wrapper #closeHH2 {
   background: #f04243;
+}
+
+#drum-machine .drum-wrapper #closeHH2:hover, #drum-machine .drum-wrapper #closeHH2:focus {
+  -webkit-box-shadow: 0 0 10px red, 0 0 20px red;
+          box-shadow: 0 0 10px red, 0 0 20px red;
 }
 
 #drum-machine .drum-wrapper #kick {
   background: blueviolet;
 }
 
+#drum-machine .drum-wrapper #kick:hover {
+  -webkit-box-shadow: 0 0 10px blueviolet, 0 0 20px blueviolet;
+          box-shadow: 0 0 10px blueviolet, 0 0 20px blueviolet;
+}
+
 #drum-machine .drum-wrapper #kickAndHH {
   background: grey;
 }
 
+#drum-machine .drum-wrapper #kickAndHH:hover, #drum-machine .drum-wrapper #kickAndHH:focus {
+  -webkit-box-shadow: 0 0 10px silver, 0 0 20px silver;
+          box-shadow: 0 0 10px silver, 0 0 20px silver;
+}
+
 #drum-machine .drum-wrapper #openHH2 {
   background: yellowgreen;
+}
+
+#drum-machine .drum-wrapper #openHH2:hover, #drum-machine .drum-wrapper #openHH2:focus {
+  -webkit-box-shadow: 0 0 10px yellowgreen, 0 0 20px yellowgreen;
+          box-shadow: 0 0 10px yellowgreen, 0 0 20px yellowgreen;
 }
 /*# sourceMappingURL=Kit.css.map */

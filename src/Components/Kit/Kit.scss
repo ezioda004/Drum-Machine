@@ -41,38 +41,67 @@
       align-self: center;
       line-height: 3;
       border-radius: 5px;
+      border: 2px #757575 solid;
+      transition: all 0.5s;
     }
-    .drum-pad:hover {
+    .drum-pad:hover, :focus {
       cursor: pointer;
       color: white;
-      box-shadow: 0 0 10px #f04243, 0 0 20px #f04243, 0 0 30px #f04243;
+      outline: none;
     }
     #snare {
         background: aqua;
     }
+    #snare:hover, #snare:focus{
+        box-shadow: 0 0 10px aqua, 0 0 20px aqua;
+    }
     #sideDrum {
         background: purple;
+    }
+    #sideDrum:hover, #sideDrum:focus{
+        box-shadow: 0 0 10px purple, 0 0 20px purple;
     }
     #tom-tom2 {
         background: green;
     }
+    #tom-tom2:hover, #tom-tom2:focus{
+        box-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow;
+    }
     #closeHH {
         background: orange;
+    }
+    #closeHH:hover, #closeHH:focus{
+        box-shadow: 0 0 10px orange, 0 0 20px orange;
     }
     #openHH {
         background: lightsalmon;
     }
+    #openHH:hover, #openHH:focus{
+        box-shadow: 0 0 10px lightcoral, 0 0 20px lightcoral;
+    }
     #closeHH2 {
         background: #f04243;
+    }
+    #closeHH2:hover, #closeHH2:focus{
+        box-shadow: 0 0 10px red, 0 0 20px red;
     }
     #kick {
         background: blueviolet;
     }
+    #kick:hover{
+        box-shadow: 0 0 10px blueviolet, 0 0 20px blueviolet;
+    }
     #kickAndHH {
         background: grey;
     }
+    #kickAndHH:hover, #kickAndHH:focus{
+        box-shadow: 0 0 10px silver, 0 0 20px silver;
+    }
     #openHH2 {
         background:yellowgreen;
+    }
+    #openHH2:hover, #openHH2:focus{
+        box-shadow: 0 0 10px yellowgreen, 0 0 20px yellowgreen;
     }
   }
 }
