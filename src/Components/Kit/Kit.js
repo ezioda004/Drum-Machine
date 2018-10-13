@@ -55,7 +55,7 @@ export const sounds = [
     key: "X",
     keycode: 88,
     id: "kickAndHH",
-    class: "kick cym1",
+    class: "base cym1",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
   },
   {
@@ -90,6 +90,7 @@ class Kit extends Component {
     });
   }
   clickHandler = e => {
+    this.props.clickSoundHandler({ key: e.target.children[0].id });
     this.playSound(e.target.children[0].id);
   };
   render() {
@@ -102,8 +103,8 @@ class Kit extends Component {
     return (
       <div id="drum-machine" ref={this.myRef}>
         {drumPads}
-        
-        <Display name  = {this.state.name}/>
+
+        <Display name={this.state.name} />
       </div>
     );
   }

@@ -23,35 +23,47 @@ class App extends Component {
   }
   static clear;
   componentDidMount() {
-    document.addEventListener("keydown", e => {
-      clearTimeout(App.clear);
-      sounds.forEach(pad => {
-        if (pad.key === e.key.toUpperCase()) {
-          this.setState(prevState => ({
-            currentKey: e.key,
-            addTo: {
-              [pad.class]: !prevState.addTo[pad.class]
-            }
-          }));
-          App.clear = setTimeout(() => {
-            this.setState(prevState => ({
-              currentKey: "",
-              addTo: {
-                [pad.class]: !prevState.addTo[pad.class]
-              }
-            }));
-          }, 2000);
-        }
-      });
-    });
+    document.addEventListener("keydown", this.soundToAnimation);
   }
+  clickSoundHandler = e => {
+    this.soundToAnimation(e);
+  };
+  soundToAnimation = e => {
+    //Clearning any previous pending setTimeout
+    clearTimeout(App.clear);
+    const addMoreToState = (obj, bool) =>
+      obj.includes(" ")
+        ? obj.split(" ").reduce((a, c) => void (a[c] = bool) || a, {})
+        : {
+            [obj]: bool
+          };
+    sounds.forEach(pad => {
+      if (pad.key === e.key.toUpperCase()) {
+        console.log(pad.class.includes(" "), typeof pad.class);
+        this.setState(prevState => ({
+          currentKey: e.key,
+          addTo: addMoreToState(pad.class, true)
+        }));
+        App.clear = setTimeout(() => {
+          this.setState(prevState => ({
+            currentKey: "",
+            addTo: addMoreToState(pad.class, false)
+          }));
+        }, 750);
+      }
+    });
+  };
   render() {
     const { addTo: part } = this.state;
     return (
       <div className="App">
         <div className="section1">
           <div className="cym">
-            <img className={`c2 ${part.cym2 ? "play" : ""}`} src={c2} alt="" />
+            <img
+              className={`c2 ${part.cym2 ? "play-cym2" : ""}`}
+              src={c2}
+              alt=""
+            />
           </div>
         </div>
         <div className="section2">
@@ -62,7 +74,7 @@ class App extends Component {
             <div className="side-base">
               <img
                 src={side}
-                className={`${part["side-base"] ? "play" : ""}`}
+                className={`${part["side-base"] ? "play-cym-sidekick" : ""}`}
               />
             </div>
           </div>
@@ -79,10 +91,14 @@ class App extends Component {
               <img className={`tt t2 ${part.tom2 ? "play" : ""}`} src={t1} />
             </div>
 
-            <img className={`c1 ${part.cym1 ? "play" : ""}`} src={c1} alt="" />
+            <img
+              className={`c1 ${part.cym1 ? "play-cym-sidekick" : ""}`}
+              src={c1}
+              alt=""
+            />
           </div>
         </div>
-        <Kit keyPress={this.state.currentKey} />
+        <Kit clickSoundHandler = {this.clickSoundHandler} keyPress={this.state.currentKey} />
       </div>
     );
   }
