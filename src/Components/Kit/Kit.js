@@ -5,42 +5,42 @@ export const sounds = [
   {
     key: "Q",
     keycode: 81,
-    id: "snare",
+    id: "tom-tom-1",
     class: "tom1",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"
   },
   {
     key: "W",
     keycode: 87,
-    id: "sideDrum",
+    id: "side-base",
     class: "side-base",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"
   },
   {
     key: "E",
     keycode: 69,
-    id: "tom-tom2",
+    id: "tom-tom-2",
     class: "tom2",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"
   },
   {
     key: "A",
     keycode: 65,
-    id: "closeHH",
+    id: "close-hi-hat",
     class: "cym1",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3"
   },
   {
     key: "S",
     keycode: 83,
-    id: "openHH",
+    id: "cymbal-1",
     class: "cym2",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3"
   },
   {
     key: "D",
     keycode: 68,
-    id: "closeHH2",
+    id: "close-hi-hat-2",
     class: "cym1",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
   },
@@ -54,14 +54,14 @@ export const sounds = [
   {
     key: "X",
     keycode: 88,
-    id: "kickAndHH",
+    id: "kick-hi-hat",
     class: "base cym1",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
   },
   {
     key: "C",
     keycode: 67,
-    id: "openHH2",
+    id: "cymbal-2",
     class: "cym2",
     sound: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
   }

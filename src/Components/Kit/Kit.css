@@ -64,62 +64,62 @@
   outline: none;
 }
 
-#drum-machine .drum-wrapper #snare {
+#drum-machine .drum-wrapper #tom-tom-1 {
   background: aqua;
 }
 
-#drum-machine .drum-wrapper #snare:hover,
-#drum-machine .drum-wrapper #snare:focus {
+#drum-machine .drum-wrapper #tom-tom-1:hover,
+#drum-machine .drum-wrapper #tom-tom-1:focus {
   -webkit-box-shadow: 0 0 10px aqua, 0 0 20px aqua;
           box-shadow: 0 0 10px aqua, 0 0 20px aqua;
 }
 
-#drum-machine .drum-wrapper #sideDrum {
+#drum-machine .drum-wrapper #side-base {
   background: purple;
 }
 
-#drum-machine .drum-wrapper #sideDrum:hover,
-#drum-machine .drum-wrapper #sideDrum:focus {
+#drum-machine .drum-wrapper #side-base:hover,
+#drum-machine .drum-wrapper #side-base:focus {
   -webkit-box-shadow: 0 0 10px purple, 0 0 20px purple;
           box-shadow: 0 0 10px purple, 0 0 20px purple;
 }
 
-#drum-machine .drum-wrapper #tom-tom2 {
+#drum-machine .drum-wrapper #tom-tom-2 {
   background: green;
 }
 
-#drum-machine .drum-wrapper #tom-tom2:hover,
-#drum-machine .drum-wrapper #tom-tom2:focus {
+#drum-machine .drum-wrapper #tom-tom-2:hover,
+#drum-machine .drum-wrapper #tom-tom-2:focus {
   -webkit-box-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow;
           box-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow;
 }
 
-#drum-machine .drum-wrapper #closeHH {
+#drum-machine .drum-wrapper #close-hi-hat {
   background: orange;
 }
 
-#drum-machine .drum-wrapper #closeHH:hover,
-#drum-machine .drum-wrapper #closeHH:focus {
+#drum-machine .drum-wrapper #close-hi-hat:hover,
+#drum-machine .drum-wrapper #close-hi-hat:focus {
   -webkit-box-shadow: 0 0 10px orange, 0 0 20px orange;
           box-shadow: 0 0 10px orange, 0 0 20px orange;
 }
 
-#drum-machine .drum-wrapper #openHH {
+#drum-machine .drum-wrapper #cymbal-1 {
   background: lightsalmon;
 }
 
-#drum-machine .drum-wrapper #openHH:hover,
-#drum-machine .drum-wrapper #openHH:focus {
+#drum-machine .drum-wrapper #cymbal-1:hover,
+#drum-machine .drum-wrapper #cymbal-1:focus {
   -webkit-box-shadow: 0 0 10px lightcoral, 0 0 20px lightcoral;
           box-shadow: 0 0 10px lightcoral, 0 0 20px lightcoral;
 }
 
-#drum-machine .drum-wrapper #closeHH2 {
+#drum-machine .drum-wrapper #close-hi-hat-2 {
   background: #f04243;
 }
 
-#drum-machine .drum-wrapper #closeHH2:hover,
-#drum-machine .drum-wrapper #closeHH2:focus {
+#drum-machine .drum-wrapper #close-hi-hat-2:hover,
+#drum-machine .drum-wrapper #close-hi-hat-2:focus {
   -webkit-box-shadow: 0 0 10px red, 0 0 20px red;
           box-shadow: 0 0 10px red, 0 0 20px red;
 }
@@ -133,22 +133,22 @@
           box-shadow: 0 0 10px violet, 0 0 20px violet;
 }
 
-#drum-machine .drum-wrapper #kickAndHH {
+#drum-machine .drum-wrapper #kick-hi-hat {
   background: grey;
 }
 
-#drum-machine .drum-wrapper #kickAndHH:hover,
-#drum-machine .drum-wrapper #kickAndHH:focus {
+#drum-machine .drum-wrapper #kick-hi-hat:hover,
+#drum-machine .drum-wrapper #kick-hi-hat:focus {
   -webkit-box-shadow: 0 0 10px silver, 0 0 20px silver;
           box-shadow: 0 0 10px silver, 0 0 20px silver;
 }
 
-#drum-machine .drum-wrapper #openHH2 {
+#drum-machine .drum-wrapper #cymbal-2 {
   background: yellowgreen;
 }
 
-#drum-machine .drum-wrapper #openHH2:hover,
-#drum-machine .drum-wrapper #openHH2:focus {
+#drum-machine .drum-wrapper #cymbal-2:hover,
+#drum-machine .drum-wrapper #cymbal-2:focus {
   -webkit-box-shadow: 0 0 10px yellowgreen, 0 0 20px yellowgreen;
           box-shadow: 0 0 10px yellowgreen, 0 0 20px yellowgreen;
 }
