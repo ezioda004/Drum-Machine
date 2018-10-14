@@ -1,6 +1,17 @@
 import React, { Component } from "react";
 import "./Display.css";
 class Display extends Component {
+  state = {
+    currVolume: 100
+  };
+  volumeSlider = e => {
+    [...this.props.audioRef.current.children].forEach(
+      pad => (pad.children[0].volume = e.target.value/100)
+    );
+    this.setState({
+      currVolume: e.target.value
+    });
+  };
   render() {
     return (
       <div id="display">
@@ -9,10 +20,20 @@ class Display extends Component {
           <span className="second-word">Machine</span>
         </h1>
         <div className="screen">
-            <div className = "inside">
-                <h2>{this.props.name}</h2>
-            </div>
-          
+          <div className="inside">
+            <h2>{this.props.name}</h2>
+          </div>
+          <div className="volume">
+            <input
+              type="range"
+              id="start"
+              name="volume"
+              min="0"
+              max="100"
+              onChange={this.volumeSlider}
+              value={this.state.currVolume}
+            />
+          </div>
         </div>
       </div>
     );

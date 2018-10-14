@@ -41,7 +41,6 @@ class App extends Component {
           };
     sounds.forEach(pad => {
       if (pad.key === e.key.toUpperCase()) {
-        console.log(pad.class.includes(" "), typeof pad.class);
         this.setState(prevState => ({
           currentKey: e.key,
           addTo: addMoreToState(pad.class, true)
@@ -60,50 +59,63 @@ class App extends Component {
     return (
       <main>
         <div className="App">
-        <div className="section1">
-          <div className="cym">
-            <img
-              className={`c2 ${part.cym2 ? "play-cym2" : ""}`}
-              src={c2}
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="section2">
-          <div className="tom">
-            <div className="tom1-container">
-              <img className={`tt t1 ${part.tom1 ? "play" : ""}`} src={t1} />
-            </div>
-            <div className="side-base">
+          <div className="section1">
+            <div className="cym">
               <img
-                src={side}
-                className={`${part["side-base"] ? "play-cym-sidekick" : ""}`}
+                className={`c2 ${part.cym2 ? "play-cym2" : ""}`}
+                src={c2}
+                alt="cymbal2"
               />
             </div>
           </div>
-          <div className="base">
-            <img
-              src={base}
-              className={`${part.base ? "play" : ""}`}
-              height="300"
-              width="300"
-            />
-          </div>
-          <div className="tom">
-            <div className="tom2-container">
-              <img className={`tt t2 ${part.tom2 ? "play" : ""}`} src={t1} />
+          <div className="section2">
+            <div className="tom">
+              <div className="tom1-container">
+                <img
+                  className={`tt t1 ${part.tom1 ? "play" : ""}`}
+                  src={t1}
+                  alt="tom-tom1"
+                />
+              </div>
+              <div className="side-base">
+                <img
+                  src={side}
+                  className={`${part["side-base"] ? "play-cym-sidekick" : ""}`}
+                  alt="side-base"
+                />
+              </div>
             </div>
+            <div className="base">
+              <img
+                src={base}
+                className={`${part.base ? "play" : ""}`}
+                height="300"
+                width="300"
+                alt="kick"
+              />
+            </div>
+            <div className="tom">
+              <div className="tom2-container">
+                <img
+                  className={`tt t2 ${part.tom2 ? "play" : ""}`}
+                  src={t1}
+                  alt="tom-tom2"
+                />
+              </div>
 
-            <img
-              className={`c1 ${part.cym1 ? "play-cym-sidekick" : ""}`}
-              src={c1}
-              alt=""
-            />
+              <img
+                className={`c1 ${part.cym1 ? "play-cym-sidekick" : ""}`}
+                src={c1}
+                alt="cymbal1"
+              />
+            </div>
           </div>
+          <Kit
+            clickSoundHandler={this.clickSoundHandler}
+            keyPress={this.state.currentKey}
+          />
         </div>
-        <Kit clickSoundHandler = {this.clickSoundHandler} keyPress={this.state.currentKey} />
-      </div>
-      <Footer />
+        <Footer />
       </main>
     );
   }

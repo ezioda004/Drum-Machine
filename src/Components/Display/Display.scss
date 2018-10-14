@@ -1,38 +1,44 @@
 #display {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    text-align: center;
-    margin: 10px;
-    
-    h2 {
-        
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  text-align: center;
+  margin: 10px;
+
+  h2 {
+  }
+  h1 {
+    margin: 0;
+    text-align: left;
+  }
+  .first-word {
+    color: coral;
+  }
+  .second-word {
+    color: whitesmoke;
+  }
+  .screen {
+    border: 1px #444 solid;
+    border-radius: 10px;
+    height: 100%;
+    flex-grow: 1;
+    margin: 5px;
+    font-family: "DS-DIGITAL";
+    color: red;
+    -webkit-box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
+    .inside {
+      margin: 10px;
+      height: 50%;
+      background: #222;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      -webkit-box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
+      box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
     }
-    h1 {
-        margin: 0;
-        text-align: left;
-    }
-    .first-word {
-        color: coral;
-    }
-    .second-word {
-        color: whitesmoke;
-    }
-    .screen {
-        border: 2px #444 solid;
-        height: 100%;
-        flex-grow: 1;
-        margin: 5px;
-        font-family: 'DS-DIGITAL';
-        color: red;
-        .inside {
-            margin: 10px;
-            height: 50%;
-            background: #222;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-    }
+  }
 }

@@ -26,14 +26,17 @@
 }
 
 #display .screen {
-  border: 2px #444 solid;
+  border: 1px #444 solid;
+  border-radius: 10px;
   height: 100%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin: 5px;
-  font-family: 'DS-DIGITAL';
+  font-family: "DS-DIGITAL";
   color: red;
+  -webkit-box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
 }
 
 #display .screen .inside {
@@ -51,5 +54,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
 }
 /*# sourceMappingURL=Display.css.map */

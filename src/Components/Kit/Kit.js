@@ -110,7 +110,7 @@ class Kit extends Component {
       <div className = "drum-wrapper" ref={this.myRef}>
       {drumPads}
       </div>
-        <Display name={this.state.name} />
+        <Display audioRef = {this.myRef} name={this.state.name} />
        
       </div>
     );
