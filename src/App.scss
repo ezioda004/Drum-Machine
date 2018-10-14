@@ -178,3 +178,19 @@ h1 {
     }
   }
 }
+@media (max-width: 1200px) {
+  .App {
+    .cym {
+      align-self: flex-start;
+      left: -12%;
+    }
+  }
+}
+@media (max-width: 845px) {
+  .App {
+    .cym {
+      align-self: flex-start;
+      left: -17%;
+    }
+  }
+}
