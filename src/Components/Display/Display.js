@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Display.css";
+
 class Display extends Component {
   state = {
     currVolume: 100
@@ -24,9 +25,10 @@ class Display extends Component {
             <h2>{this.props.name}</h2>
           </div>
           <div className="volume">
+          <i className="fas fa-volume-up fa-lg"></i>
             <input
               type="range"
-              id="start"
+              id="vol"
               name="volume"
               min="0"
               max="100"
