@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Orbitron");
 @font-face {
-  font-family: 'DS-DIGITAL';
+  font-family: "DS-DIGITAL";
   src: url("https://res.cloudinary.com/drxsinkfw/raw/upload/v1539464452/DS-DIGI.TTF");
   src: url("https://res.cloudinary.com/drxsinkfw/raw/upload/v1539464452/DS-DIGIB.TTF");
   src: url("https://res.cloudinary.com/drxsinkfw/raw/upload/v1539464452/DS-DIGIT.TTF");
@@ -12,7 +12,7 @@ body,
 #root {
   height: 100%;
   background: #333;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
 .App {
@@ -230,6 +230,48 @@ body,
   100% {
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
+  }
+}
+
+@media (max-width: 644px) {
+  .App .base {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .App .base img {
+    height: 200px;
+    width: 200px;
+  }
+  .App .c1,
+  .App .side-base,
+  .App .t1,
+  .App .t2,
+  .App .cym {
+    height: 100px;
+    width: 100px;
+  }
+  .App .side-base {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .tom1-container {
+    top: 50px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .tom2-container {
+    top: 50px;
+  }
+  .cym {
+    top: 80px !important;
+    left: -12% !important;
+  }
+}
+
+@media (max-width: 490px) {
+  .App .tom1-container {
+    left: 37% !important;
   }
 }
 /*# sourceMappingURL=App.css.map */

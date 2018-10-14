@@ -1,107 +1,176 @@
 #drum-machine {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    width: 47%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 100%;
 
-        background-color: #757575;
-        /* IE9, iOS 3.2+ */
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIwJSIgY3k9IjAlIiByPSIxNDEuNDIxMzU2MjM3MzA5NSUiPjxzdG9wIHN0b3AtY29sb3I9IiM4MDgwODAiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzViNWI1YiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjU1OTk5OTk5OTk5OTk5OSIvPjxzdG9wIHN0b3AtY29sb3I9IiNhOWE5YTkiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
-        /* Android 2.3- hack (needed for the actual radial gradient) */
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIwJSIgY3k9IjAlIiByPSIxNDEuNDIxMzU2MjM3MzA5NSUiPjxzdG9wIHN0b3AtY29sb3I9IiM4MDgwODAiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzViNWI1YiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjU1OTk5OTk5OTk5OTk5OSIvPjxzdG9wIHN0b3AtY29sb3I9IiNhOWE5YTkiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+),
-            -webkit-gradient(radial, left top, 0, left top, 724,color-stop(0, rgb(128, 128, 128)),color-stop(0.656, rgb(91, 91, 91)),color-stop(1, rgb(169, 169, 169)));
-        /* Android 2.3 */
-        background-image: -webkit-radial-gradient(left top, ellipse farthest-corner,rgb(128, 128, 128) 0%,rgb(91, 91, 91) 65.6%,rgb(169, 169, 169) 100%);
-        /* IE10+ */
-        background-image: radial-gradient(ellipse farthest-corner at left top,rgb(128, 128, 128) 0%,rgb(91, 91, 91) 65.6%,rgb(169, 169, 169) 100%);
-        background-image: -ms-radial-gradient(left top, ellipse farthest-corner,rgb(128, 128, 128) 0%,rgb(91, 91, 91) 65.6%,rgb(169, 169, 169) 100%);
-        border-radius: 10px;
+  background-color: #757575;
+  /* IE9, iOS 3.2+ */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIwJSIgY3k9IjAlIiByPSIxNDEuNDIxMzU2MjM3MzA5NSUiPjxzdG9wIHN0b3AtY29sb3I9IiM4MDgwODAiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzViNWI1YiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjU1OTk5OTk5OTk5OTk5OSIvPjxzdG9wIHN0b3AtY29sb3I9IiNhOWE5YTkiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+  /* Android 2.3- hack (needed for the actual radial gradient) */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIwJSIgY3k9IjAlIiByPSIxNDEuNDIxMzU2MjM3MzA5NSUiPjxzdG9wIHN0b3AtY29sb3I9IiM4MDgwODAiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzViNWI1YiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjU1OTk5OTk5OTk5OTk5OSIvPjxzdG9wIHN0b3AtY29sb3I9IiNhOWE5YTkiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+),
+    -webkit-gradient(radial, left top, 0, left top, 724, color-stop(0, rgb(128, 128, 128)), color-stop(0.656, rgb(91, 91, 91)), color-stop(1, rgb(169, 169, 169)));
+  /* Android 2.3 */
+  background-image: -webkit-radial-gradient(
+    left top,
+    ellipse farthest-corner,
+    rgb(128, 128, 128) 0%,
+    rgb(91, 91, 91) 65.6%,
+    rgb(169, 169, 169) 100%
+  );
+  /* IE10+ */
+  background-image: radial-gradient(
+    ellipse farthest-corner at left top,
+    rgb(128, 128, 128) 0%,
+    rgb(91, 91, 91) 65.6%,
+    rgb(169, 169, 169) 100%
+  );
+  background-image: -ms-radial-gradient(
+    left top,
+    ellipse farthest-corner,
+    rgb(128, 128, 128) 0%,
+    rgb(91, 91, 91) 65.6%,
+    rgb(169, 169, 169) 100%
+  );
+  border-radius: 10px;
 
-    
   .drum-wrapper {
     display: flex;
     flex-flow: row wrap;
     margin: 50px auto 10px auto;
     width: 60%;
-    // max-width: 60%;
     justify-content: center;
     font-weight: 600;
-    
+
     .drum-pad {
       width: 65px;
       height: 55px !important;
       text-align: center;
       color: black;
       padding: 5px;
-    //   text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold, 0 0 40px gold,
-    //     0 0 50px gold;
-      // background: #FBD490;
       flex-grow: 0;
       margin: 3px;
       align-self: center;
       line-height: 3;
       border-radius: 5px;
       border: 2px #757575 solid;
-      transition: all 0.5s;
+      transition: all 0.25s;
+      -webkit-box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
+      box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
     }
-    .drum-pad:hover, :focus {
+    .drum-pad:hover,
+    :focus {
       cursor: pointer;
       color: white;
       outline: none;
     }
     #snare {
-        background: aqua;
+      background: aqua;
     }
-    #snare:hover, #snare:focus{
-        box-shadow: 0 0 10px aqua, 0 0 20px aqua;
+    #snare:hover,
+    #snare:focus {
+      box-shadow: 0 0 10px aqua, 0 0 20px aqua;
     }
     #sideDrum {
-        background: purple;
+      background: purple;
     }
-    #sideDrum:hover, #sideDrum:focus{
-        box-shadow: 0 0 10px purple, 0 0 20px purple;
+    #sideDrum:hover,
+    #sideDrum:focus {
+      box-shadow: 0 0 10px purple, 0 0 20px purple;
     }
     #tom-tom2 {
-        background: green;
+      background: green;
     }
-    #tom-tom2:hover, #tom-tom2:focus{
-        box-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow;
+    #tom-tom2:hover,
+    #tom-tom2:focus {
+      box-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow;
     }
     #closeHH {
-        background: orange;
+      background: orange;
     }
-    #closeHH:hover, #closeHH:focus{
-        box-shadow: 0 0 10px orange, 0 0 20px orange;
+    #closeHH:hover,
+    #closeHH:focus {
+      box-shadow: 0 0 10px orange, 0 0 20px orange;
     }
     #openHH {
-        background: lightsalmon;
+      background: lightsalmon;
     }
-    #openHH:hover, #openHH:focus{
-        box-shadow: 0 0 10px lightcoral, 0 0 20px lightcoral;
+    #openHH:hover,
+    #openHH:focus {
+      box-shadow: 0 0 10px lightcoral, 0 0 20px lightcoral;
     }
     #closeHH2 {
-        background: #f04243;
+      background: #f04243;
     }
-    #closeHH2:hover, #closeHH2:focus{
-        box-shadow: 0 0 10px red, 0 0 20px red;
+    #closeHH2:hover,
+    #closeHH2:focus {
+      box-shadow: 0 0 10px red, 0 0 20px red;
     }
     #kick {
-        background: blueviolet;
+      background: blueviolet;
     }
-    #kick:hover{
-        box-shadow: 0 0 10px blueviolet, 0 0 20px blueviolet;
+    #kick:hover {
+      box-shadow: 0 0 10px violet, 0 0 20px violet;
     }
     #kickAndHH {
-        background: grey;
+      background: grey;
     }
-    #kickAndHH:hover, #kickAndHH:focus{
-        box-shadow: 0 0 10px silver, 0 0 20px silver;
+    #kickAndHH:hover,
+    #kickAndHH:focus {
+      box-shadow: 0 0 10px silver, 0 0 20px silver;
     }
     #openHH2 {
-        background:yellowgreen;
+      background: yellowgreen;
     }
-    #openHH2:hover, #openHH2:focus{
-        box-shadow: 0 0 10px yellowgreen, 0 0 20px yellowgreen;
+    #openHH2:hover,
+    #openHH2:focus {
+      box-shadow: 0 0 10px yellowgreen, 0 0 20px yellowgreen;
     }
   }
+}
+
+@media  (max-width: 1500px){
+    #drum-machine {
+        width: 750px;
+    }
+}
+@media (max-width: 778px){
+    // #drum-machine {
+    //     width: 100%;
+    //     flex-direction: column;
+    //     #display {
+    //         order: 1;
+    //         h1 {
+    //             text-align: center;
+    //         }
+    //     };
+    //     .drum-wrapper {
+    //         order: 2;
+    //         width: 300px;
+    //     }
+    // }
+    #drum-machine {
+        width: 100%;
+        #display {
+            flex-basis: 72%;
+        }
+    }
+}
+@media (max-width: 644px){
+     #drum-machine {
+        width: 100%;
+        flex-direction: column;
+        #display {
+            order: 1;
+            h1 {
+                text-align: center;
+            }
+        };
+        .drum-wrapper {
+            order: 2;
+            width: 300px;
+        }
+    }
 }

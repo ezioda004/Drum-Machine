@@ -6,7 +6,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-  width: 47%;
+  width: 50%;
+  max-width: 100%;
   background-color: #757575;
   /* IE9, iOS 3.2+ */
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIwJSIgY3k9IjAlIiByPSIxNDEuNDIxMzU2MjM3MzA5NSUiPjxzdG9wIHN0b3AtY29sb3I9IiM4MDgwODAiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzViNWI1YiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuNjU1OTk5OTk5OTk5OTk5OSIvPjxzdG9wIHN0b3AtY29sb3I9IiNhOWE5YTkiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
@@ -50,11 +51,14 @@
   line-height: 3;
   border-radius: 5px;
   border: 2px #757575 solid;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  -webkit-box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px -2px 35px -6px rgba(0, 0, 0, 0.75);
 }
 
-#drum-machine .drum-wrapper .drum-pad:hover, #drum-machine .drum-wrapper :focus {
+#drum-machine .drum-wrapper .drum-pad:hover,
+#drum-machine .drum-wrapper :focus {
   cursor: pointer;
   color: white;
   outline: none;
@@ -64,7 +68,8 @@
   background: aqua;
 }
 
-#drum-machine .drum-wrapper #snare:hover, #drum-machine .drum-wrapper #snare:focus {
+#drum-machine .drum-wrapper #snare:hover,
+#drum-machine .drum-wrapper #snare:focus {
   -webkit-box-shadow: 0 0 10px aqua, 0 0 20px aqua;
           box-shadow: 0 0 10px aqua, 0 0 20px aqua;
 }
@@ -73,7 +78,8 @@
   background: purple;
 }
 
-#drum-machine .drum-wrapper #sideDrum:hover, #drum-machine .drum-wrapper #sideDrum:focus {
+#drum-machine .drum-wrapper #sideDrum:hover,
+#drum-machine .drum-wrapper #sideDrum:focus {
   -webkit-box-shadow: 0 0 10px purple, 0 0 20px purple;
           box-shadow: 0 0 10px purple, 0 0 20px purple;
 }
@@ -82,7 +88,8 @@
   background: green;
 }
 
-#drum-machine .drum-wrapper #tom-tom2:hover, #drum-machine .drum-wrapper #tom-tom2:focus {
+#drum-machine .drum-wrapper #tom-tom2:hover,
+#drum-machine .drum-wrapper #tom-tom2:focus {
   -webkit-box-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow;
           box-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow;
 }
@@ -91,7 +98,8 @@
   background: orange;
 }
 
-#drum-machine .drum-wrapper #closeHH:hover, #drum-machine .drum-wrapper #closeHH:focus {
+#drum-machine .drum-wrapper #closeHH:hover,
+#drum-machine .drum-wrapper #closeHH:focus {
   -webkit-box-shadow: 0 0 10px orange, 0 0 20px orange;
           box-shadow: 0 0 10px orange, 0 0 20px orange;
 }
@@ -100,7 +108,8 @@
   background: lightsalmon;
 }
 
-#drum-machine .drum-wrapper #openHH:hover, #drum-machine .drum-wrapper #openHH:focus {
+#drum-machine .drum-wrapper #openHH:hover,
+#drum-machine .drum-wrapper #openHH:focus {
   -webkit-box-shadow: 0 0 10px lightcoral, 0 0 20px lightcoral;
           box-shadow: 0 0 10px lightcoral, 0 0 20px lightcoral;
 }
@@ -109,7 +118,8 @@
   background: #f04243;
 }
 
-#drum-machine .drum-wrapper #closeHH2:hover, #drum-machine .drum-wrapper #closeHH2:focus {
+#drum-machine .drum-wrapper #closeHH2:hover,
+#drum-machine .drum-wrapper #closeHH2:focus {
   -webkit-box-shadow: 0 0 10px red, 0 0 20px red;
           box-shadow: 0 0 10px red, 0 0 20px red;
 }
@@ -119,15 +129,16 @@
 }
 
 #drum-machine .drum-wrapper #kick:hover {
-  -webkit-box-shadow: 0 0 10px blueviolet, 0 0 20px blueviolet;
-          box-shadow: 0 0 10px blueviolet, 0 0 20px blueviolet;
+  -webkit-box-shadow: 0 0 10px violet, 0 0 20px violet;
+          box-shadow: 0 0 10px violet, 0 0 20px violet;
 }
 
 #drum-machine .drum-wrapper #kickAndHH {
   background: grey;
 }
 
-#drum-machine .drum-wrapper #kickAndHH:hover, #drum-machine .drum-wrapper #kickAndHH:focus {
+#drum-machine .drum-wrapper #kickAndHH:hover,
+#drum-machine .drum-wrapper #kickAndHH:focus {
   -webkit-box-shadow: 0 0 10px silver, 0 0 20px silver;
           box-shadow: 0 0 10px silver, 0 0 20px silver;
 }
@@ -136,8 +147,49 @@
   background: yellowgreen;
 }
 
-#drum-machine .drum-wrapper #openHH2:hover, #drum-machine .drum-wrapper #openHH2:focus {
+#drum-machine .drum-wrapper #openHH2:hover,
+#drum-machine .drum-wrapper #openHH2:focus {
   -webkit-box-shadow: 0 0 10px yellowgreen, 0 0 20px yellowgreen;
           box-shadow: 0 0 10px yellowgreen, 0 0 20px yellowgreen;
+}
+
+@media (max-width: 1500px) {
+  #drum-machine {
+    width: 750px;
+  }
+}
+
+@media (max-width: 778px) {
+  #drum-machine {
+    width: 100%;
+  }
+  #drum-machine #display {
+    -ms-flex-preferred-size: 72%;
+        flex-basis: 72%;
+  }
+}
+
+@media (max-width: 644px) {
+  #drum-machine {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #drum-machine #display {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #drum-machine #display h1 {
+    text-align: center;
+  }
+  #drum-machine .drum-wrapper {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 300px;
+  }
 }
 /*# sourceMappingURL=Kit.css.map */

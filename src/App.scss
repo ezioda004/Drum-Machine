@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Orbitron');
-@font-face{
-  font-family: 'DS-DIGITAL';
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+@font-face {
+  font-family: "DS-DIGITAL";
   src: url("https://res.cloudinary.com/drxsinkfw/raw/upload/v1539464452/DS-DIGI.TTF");
   src: url("https://res.cloudinary.com/drxsinkfw/raw/upload/v1539464452/DS-DIGIB.TTF");
   src: url("https://res.cloudinary.com/drxsinkfw/raw/upload/v1539464452/DS-DIGIT.TTF");
@@ -11,7 +11,7 @@ body,
 #root {
   height: 100%;
   background: #333;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 h1 {
 }
@@ -134,6 +134,47 @@ h1 {
     100% {
       transform: scaleX(-1);
       // transform: rotate(initial);
+    }
+  }
+}
+
+@media (max-width: 644px) {
+  .App {
+    .base {
+      align-self: flex-end;
+      img {
+        height: 200px;
+        width: 200px;
+      }
+    }
+    .c1,
+    .side-base,
+    .t1,
+    .t2,
+    .cym {
+      height: 100px;
+      width: 100px;
+    }
+    .side-base {
+      align-self: flex-end;
+    }
+  }
+  .tom1-container {
+    top: 50px;
+    align-self: center;
+  }
+  .tom2-container {
+    top: 50px;
+  }
+  .cym {
+    top: 80px !important;
+    left: -12% !important;
+  }
+}
+@media (max-width: 490px) {
+  .App {
+    .tom1-container {
+      left: 37% !important;
     }
   }
 }
