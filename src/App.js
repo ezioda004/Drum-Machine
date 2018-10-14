@@ -5,6 +5,7 @@ import side from "./icons/side-drum.svg";
 import c1 from "./icons/cymbals.svg";
 import c2 from "./icons/cymbals1.svg";
 import Kit, { sounds } from "./Components/Kit/Kit";
+import Footer from "./Components/Footer/Footer";
 import "./App.css";
 class App extends Component {
   constructor(props) {
@@ -102,6 +103,7 @@ class App extends Component {
         </div>
         <Kit clickSoundHandler = {this.clickSoundHandler} keyPress={this.state.currentKey} />
       </div>
+      <Footer />
       </main>
     );
   }
