@@ -43,4 +43,4 @@ The app should open up in your default browser at `localhost:5000`.
 
 
 ## Live Preview:
-- The live preview of the SPA can be found here: https://drum-machine.netlify.com/
+- The live preview of the SPA can be found here: https://drum-machine.netlify.com/ and [Codepen](https://codepen.io/ezioda004/full/QZqrOY/)
